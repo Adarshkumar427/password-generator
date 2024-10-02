@@ -82,7 +82,7 @@ generatePassword()
                 </v-row>
                 <v-divider></v-divider>
 
-                <div class="d-flex">
+                <div>
                     <div>
                         <v-row>
                             <v-col class="mt-3">
