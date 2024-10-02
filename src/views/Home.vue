@@ -55,7 +55,7 @@ function generatePassword() {
 watch([passwordLength, includeUpperCase, includeLowerCase, includeNumbers, includeSymbols], generatePassword)
 
 generatePassword()
-// test comment
+
 </script>
 
 <template>
