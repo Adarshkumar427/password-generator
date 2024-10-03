@@ -68,7 +68,7 @@ generatePassword()
     <Header />
 
     <v-app>
-        <v-container class="d-flex justify-center mt-16 flex-column">
+        <v-container class="d-flex justify-center mt-10 flex-column">
             <v-card class="pa-10 ">
                 <p class="password ">{{ password }}</p>
 
