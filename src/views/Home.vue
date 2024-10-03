@@ -9,6 +9,8 @@ const includeUpperCase = ref(true)
 const includeLowerCase = ref(true)
 const includeNumbers = ref(true)
 const includeSymbols = ref(true)
+const showSnackbar = ref(false)
+const snackbarMessage = ref('')
 
 const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 const lowercase = 'abcdefghijklmnopqrstuvwxyz'
@@ -22,6 +24,10 @@ function copyPassword() {
     textarea.select();
     document.execCommand("copy");
     document.body.removeChild(textarea);
+    snackbarMessage.value = 'Password copied!'
+    showSnackbar.value = true
+
+
 }
 
 function generatePassword() {
@@ -66,7 +72,7 @@ generatePassword()
             <v-card class="pa-10 ">
                 <p class="password ">{{ password }}</p>
 
-                <v-divider color="green bold" class="mt-2 mb-3"></v-divider>
+                <v-divider color="green bold" class="mt-1 mb-3"></v-divider>
                 <div class="d-flex">
 
                     <v-btn @click="copyPassword" icon="mdi-content-copy" size="x-small" color="green"
@@ -113,6 +119,10 @@ generatePassword()
                     </div>
                 </div>
             </v-card>
+
+            <v-snackbar color="green" v-model="showSnackbar" :timeout="1000">
+                {{ snackbarMessage }}
+            </v-snackbar>
         </v-container>
     </v-app>
 </template>
