@@ -67,9 +67,9 @@ generatePassword()
 <template>
     <Header />
 
-    <v-app>
+    <v-app class="bg-grey-darken-4">
         <v-container class="d-flex justify-center mt-10 flex-column">
-            <v-card class="pa-10 ">
+            <v-card class="pa-10 " color="blue-grey-darken-3">
                 <p class="password ">{{ password }}</p>
 
                 <v-divider color="green bold" class="mt-1 mb-3"></v-divider>
@@ -82,7 +82,7 @@ generatePassword()
                 </div>
             </v-card>
 
-            <v-card class="pa-10 my-4 ">
+            <v-card class="pa-10 my-4 " color="blue-grey-darken-3">
                 <v-row>
                     <v-col style="font-size: 20px;">Customize your password</v-col>
                 </v-row>
